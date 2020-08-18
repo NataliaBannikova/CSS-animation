@@ -43,7 +43,6 @@
 
 .helicopter::after {
     background-image: url(../img/iphone-front.png);
-    animation-name: front-off;
     right: 21%;
     transform: translateY(200%) rotate(20deg);
     -webkit-transform: translateY(200%) rotate(20deg);
@@ -54,7 +53,6 @@
 
 .helicopter::before {
     background-image: url(../img/iphone-back.png);
-    animation-name: back-off;
     left: 21%;
     transform: translateY(200%) rotate(-20deg);
     -webkit-transform: translateY(200%) rotate(-20deg);
@@ -69,12 +67,20 @@
     animation-fill-mode: forwards;
 }
 
-.helicopter:hover::before {
+.animation-on::after {
+    animation-name: front-on;
+}
+
+.animation-off::after {
+    animation-name: front-off;
+}
+
+.animation-on::before {
     animation-name: back-on;
 }
 
-.helicopter:hover::after {
-   animation-name: front-on;
+.animation-off::before {
+    animation-name: back-off;
 }
 
 @keyframes helicopter-on {
